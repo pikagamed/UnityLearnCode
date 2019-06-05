@@ -5,16 +5,51 @@ public class Dog
 {
     #region Variable Declare
 
-    public string name = "";
-    public float weight = 0F;
-    public string type = "米克斯";
-    public string sex = "";
-    public string color = "";
-    public int age = 0;
+    private string name = "";
+    private float weight = 0F;
+    private string type = "米克斯";
+    private string sex = "";
+    private string color = "";
+    private int age = 0;
 
     #endregion
 
+    public string Name
+    {
+        get
+        {
+            return name;
+        }
+    }
+
     #region Method Declare
+
+    /// <summary>
+    /// 建構子
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="weight"></param>
+    /// <param name="type"></param>
+    /// <param name="sex"></param>
+    /// <param name="color"></param>
+    /// <param name="age"></param>
+    public Dog(string name, float weight, string type, string sex, string color, int age)
+    {
+        this.name = name;
+        this.weight = weight;
+        this.type = type;
+        this.sex = sex;
+        this.color = color;
+        this.age = age;
+    }
+
+    /// <summary>
+    /// 取得資訊
+    /// </summary>
+    public void GetInfo()
+    {
+        Debug.Log(this.name + " 品種：" + this.type + " 顏色：" + this.color);
+    }
 
     /// <summary>
     /// 引導狗做出叫動作之方法
